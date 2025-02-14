@@ -22,4 +22,9 @@ public class ControlePoissonAxeRotation : MonoBehaviour
     {
         _rb.AddRelativeTorque(0, angle, 0, ForceMode.VelocityChange);
     }
+
+    void OnDash()
+    {
+        _rb.AddRelativeForce(Vector3.forward * 1f, ForceMode.VelocityChange);
+    }
 }
